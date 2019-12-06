@@ -12,11 +12,9 @@ class App extends React.Component {
   componentDidMount() {
     axios.get("http://localhost:5000/api/players")
     .then(res => {
-      console.log(res)
       this.setState({
         players: res.data
-      })
-      console.log(res.data)
+      }) 
     })
     .catch(error => {
       console.log('Data was not returned!', error);

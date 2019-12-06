@@ -1,5 +1,5 @@
   
-import { useLocalStorage } from './useLocalStorage';
+import useLocalStorage from './useLocalStorage';
 import { useEffect } from 'react';
 
 const AddDarkMode = () => {

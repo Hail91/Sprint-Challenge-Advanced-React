@@ -1,9 +1,27 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import App from './App';
+import { render } from '@testing-library/react';
+import NavBar from './components/NavBar';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+test('App renders to screen properly', () => {
+  render(<App />)
 });
+
+test('NavBar component renders properly', () => {
+  render(<NavBar />)
+});
+
+test('Home text exists in NavBar', () => {
+  const { getByText } = render(<NavBar />);
+  getByText(/home/i);
+});
+
+test('Search Button exists in NavBar component', () => {
+  const { getAllByText } = render(<NavBar />);
+  getAllByText(/search/i);
+});
+
+
+
+
+
