@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import axios from 'axios';
 import PlayerCard from './components/PlayerCard';
+import NavBar from './components/NavBar';
 
 class App extends React.Component {
   state = {
@@ -25,7 +26,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Womens world cup players ranked by Interest</h1>
+        <NavBar />
         <PlayerCard
         players={this.state.players}
         />
